@@ -3,6 +3,7 @@
 # For multiples of 3, print "Fizz"; for multiples of 5,
 # print "Buzz"; and for numbers that are multiples of both 3 and 5,
 # print "FizzBuzz".
+print("FIZZBUZZ")
 numbers=range(1,101)#declare a variable that holds the range
 for number in numbers: #use for loop y iterate through each of the numbers in the range individually
     if number%3==0 and number%5==0:#print FizzBuzz for every number divisible by both 3 and 5
@@ -17,15 +18,25 @@ for number in numbers: #use for loop y iterate through each of the numbers in th
 
 #Question 2: Fibonacci Sequence
 # Write a program to generate the Fibonacci sequence up to 100.
-         
+#create a function for the fibonacci sequence
+print("FIBONACCI SERIES LESS THAN 100")         
+def fib():
+    fib1=0    #declare and define the first fib number as 0
+    fib2=1    #declare and define the second fib number as 1
+    while fib1 < 100:  # Check if the next number to print is less than 100
+       print(fib1)  # Print the current number if it is less than 100
+       fibn= fib1 + fib2  # Calculate the next fibonacci number in the sequence which is the sum of the last 2 previous numbers
+       fib1 = fib2  # Update fib1 to the next number
+       fib2 = fibn  # Update fib2 to the sum of a and b
 
+fib()
 
 #  Question 3: Power of Two
 # Write a program that takes an integer as input and returns true if the input is a power of two.
 # Examples:
 # 8=> returns true
 # 6=> returns false  
-         
+print("CHECKING IF A NUMBER IS A POWER OF 2")        
 import math #use this to import math functions for easier manipulation of data using the mathematical functions
 #create a function to check if the input from the user is a power of two
 def power_two(n):#we pass n as an argument so that we can use it in the function
@@ -50,7 +61,7 @@ except ValueError:
 # Examples:
 # "hi"=> returns "Hi"
 # "i love programming"=> returns "I Love Programming"
-
+print("CAPITALIZING WORDS IN A SENTENCE")
 #create afunction to capitalize strings
 def start_capital(capitalize_input):
     # Capitalize the first letter of each word using the title() 
@@ -82,6 +93,7 @@ while True:
 # For input -56, the program should return -65.
 # For input -90, the program should return -9.
 # For input 91, the program should return 19.
+print("REVERSING A NUMBER")    
     
 user_input = input("Enter a number and get the reversed version: ")
 #we want to catch the error of a valid number and also specify ho to deal with negative numbers
@@ -112,6 +124,7 @@ except ValueError:
 # Question 6: Count Vowels
 # Write a program that counts the number of vowels in a sentence.
 # eg " Hello World " => returns 2    
+print("COUNTING NUMBER OF VOWELS IN A SENTENCE")    
 
 user_input = input("Write a sentence: ") 
 format_input=user_input.lower()# Convert to lowercase to count both upper and lower case vowels
